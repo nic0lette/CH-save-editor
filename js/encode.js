@@ -35,16 +35,6 @@ function encodeOld(data) {
 	data = red ? wipe(data) : data;
 	console.log(data)
 	delete data.type;
-	data.account = {
-		flag: true,
-		name: "Clicker Heroes save editor",
-		author: {
-			discord: "Legofury#9425",
-			reddit: "/u/Legocro",
-			github: "/Legocro"
-		},
-		note: "This is added by integration and cannot be removed"
-	};
 	data = JSON.stringify(data);
     let letters = "0123456789abcdefghijklmnopqrstuvwxyz"
     let newdata = btoa(data);
@@ -61,16 +51,6 @@ function encodeNew(data) {
 	data = red ? wipe(data) : data;
 	console.log(data);
 	delete data.type
-	data.account = {
-		flag: true,
-		name: "Clicker Heroes save editor™",
-		author: {
-			discord: "Legofury#9425",
-			reddit: "/u/Legocro",
-			github: "/Legocro"
-		},
-		note: "This is added by integration and cannot be removed"
-	};
 	let hash = "7a990d405d2c6fb93aa8fbb0ec1a3b23";
 	data = JSON.stringify(data);
 	let encodedData = pako.deflate(data, {to: 'string'});
